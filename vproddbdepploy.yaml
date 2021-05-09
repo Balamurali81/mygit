@@ -21,11 +21,11 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "500m"
-          ports:
-          - containerPort: 3306
-          env:
-            - name:  MYSQL_ROOT_PASSWORD  
-              valueFrom:
-                secretKeyRef:
-                  name:  vprofile-secret
-                  key:  db_pass
+        ports:
+        - containerPort: 3306
+        env:
+          - name:  MYSQL_ROOT_PASSWORD  
+            valueFrom:
+              secretKeyRef:
+                name:  vprofile-secret
+                key:  db_pass
