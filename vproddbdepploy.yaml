@@ -19,13 +19,13 @@ spec:
           mountPath: /mnt/volume_nyc3_01
         resources:
           limits:
-            memory: "128Mi"
+            memory: "256Mi"
             cpu: "500m"
         ports:
         - containerPort: 3306
       env:
-            - name:  MYSQL_ROOT_PASSWORD  
-              valueFrom:
-                secretKeyRef:
-                  name:  vprofile-secret
-                  key:  db_pass
+        - name:  MYSQL_ROOT_PASSWORD  
+          valueFrom:
+            secretKeyRef:
+              name:  vprofile-secret
+              key:  db_pass
