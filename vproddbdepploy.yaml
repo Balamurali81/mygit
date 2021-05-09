@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: vprofiledb
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vprofiledb
+    spec:
+      containers:
+      - name: vprodb
+        image: vprofile/vprofiledb:v1
+        volumeMounts:
+        - name:  vprodb-data-vol
+          mountPath: /mnt/volume_nyc3_01
+        ports:
+        - name:  db-port
+          port:  3306
+          protocol: TCP
+          env:
+            - name:  MYSQL_ROOT_PASSWORD  
+              valueFrom:
+                secretKeyRef:
+                  name:  vprofile-secret
+                  key:  db_pass   
