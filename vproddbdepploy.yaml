@@ -15,7 +15,7 @@ spec:
       - name: vprodb
         image: vprofile/vprofiledb:v1
         volumeMounts:
-        - name:  volume-nyc3-01
+        - name:  "/dev/sda"
           mountPath: /mnt/volume_nyc3_01
         resources:
           limits:
