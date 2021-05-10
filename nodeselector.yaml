@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deploy
+  name: nodeselector
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: nodeselector
   template:
     metadata:
       labels:
-        app: nginx
+        app: nodeselector
     spec:
       containers:
-      - name: nginx
+      - name: nodeselector
         image: nginx
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "100m"
+            memory: "32Mi"
+            cpu: "10m"
         ports:
           - name: nginxport
             containerPort: 80
