@@ -7,7 +7,7 @@ spec:
     app: nginx
   ports:
   - port: 80
-    NodePort: 31010
+    nodePort: 31010
     targetPort: nginxport
     protocol: TCP
 
