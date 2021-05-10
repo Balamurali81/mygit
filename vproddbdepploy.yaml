@@ -16,7 +16,7 @@ spec:
         image: vprofile/vprofiledb:v1
         volumeMounts:
         - name: vprodb-data
-          mountPath: /var/lib/mysql
+          # mountPath: /var/lib/mysql
         resources:
           limits:
             memory: "256Mi"
@@ -32,3 +32,4 @@ spec:
       volumes:
         - name : vprodb-data
           mountPath : /mnt/volume_nyc3_01
+      
