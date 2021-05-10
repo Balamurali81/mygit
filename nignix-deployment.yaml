@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Myfirst-niginx-deployemnt
+spec:
+  selector:
+    replicas: 3
+    matchLabels:
+      app: nginix
+  template:
+    metadata:
+      labels:
+        app: nginix
+    spec:
+      containers:
+      - name: nginix
+        image: nginix
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
