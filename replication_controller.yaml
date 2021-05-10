@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: sameple_replication_controller
+  name: samplerc
 spec:
   replicas: 3
   selector:
-    app: sameple_replication_controller
+    app: samplerc
   template:
     metadata:
-      name: sameple_replication_controller
+      name: samplerc
       labels:
-        app: sameple_replication_controller
+        app: samplerc
     spec:
       containers:
-        - name: sameple_replication_controller
+        - name: samplerc
           image: nbmk1981/sample-html
           ports:
             - containerPort: 80
