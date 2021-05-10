@@ -6,15 +6,15 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginix
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginix
+        app: nginx
     spec:
       containers:
-      - name: nginix
-        image: nginix
+      - name: nginx
+        image: nginx
         resources:
           limits:
             memory: "128Mi"
