@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: nginxservice
 spec:
   selector:
     app: nginx
   ports:
   - port: 80
-    NodePort: 30101
+    NodePort: 31010
     targetPort: nginxport
+    protocol: TCP
 
