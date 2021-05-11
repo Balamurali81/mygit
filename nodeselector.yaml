@@ -23,4 +23,4 @@ spec:
           - name: nginxport
             containerPort: 80
       nodeSelector:
-        disk_type : ssd
+        disktype : ssd
