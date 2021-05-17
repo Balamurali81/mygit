@@ -7,9 +7,9 @@ spec:
   - name: lifecycle-demo-container
     image: nginx
     resources:
-    limits:
-      memory: "128Mi"
-      cpu: "100m"
+      limits:
+        memory: "128Mi"
+        cpu: "100m"
     lifecycle:
       postStart:
         exec:
