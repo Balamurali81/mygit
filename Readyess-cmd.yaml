@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: liveness-exec
+  name: readiness-exec
   labels:
-    test: liveness
+    test: readiness
 spec:
   containers:
-  - name: liveness
+  - name: readiness
     image: k8s.gcr.io/busybox
     resources:
         limits:
@@ -28,6 +28,6 @@ spec:
         command:
           - cat
           - /tmp/healthy
-      initialDelaySeconds: 5
+      initialDelaySeconds: 15
       periodSeconds: 5
 
