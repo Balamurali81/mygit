@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: posix_pod
+  labels:
+    name: posix
+spec:
+  containers:
+  - name: posix
+    image: nginx
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    envFrom:
+      - configMapRef: 
+        name: posix_configmap
+          
