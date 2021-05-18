@@ -16,5 +16,5 @@ spec:
     - containerPort: 80
     envFrom:
     - configMapRef: 
-      name: posix-configmap
+        name: posix-configmap
           
