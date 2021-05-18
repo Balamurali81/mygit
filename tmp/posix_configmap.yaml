@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: posix_configmap
+  name: posix-configmap
 data:
   Instance_type: t2.micro
   AMI: Bala

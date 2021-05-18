@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: posix_pod
+  name: posix-pod
   labels:
     name: posix
 spec:
