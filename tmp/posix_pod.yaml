@@ -12,6 +12,8 @@ spec:
       limits:
         memory: "128Mi"
         cpu: "500m"
+    ports:
+    - containerPort: 8080
     envFrom:
       - configMapRef: 
         name: posix-configmap
