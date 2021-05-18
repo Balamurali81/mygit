@@ -14,5 +14,5 @@ spec:
         cpu: "500m"
     envFrom:
       - configMapRef: 
-        name: posix_configmap
+        name: posix-configmap
           
