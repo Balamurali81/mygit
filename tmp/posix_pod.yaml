@@ -13,8 +13,8 @@ spec:
         memory: "128Mi"
         cpu: "500m"
     ports:
-    - containerPort: 8080
+    - containerPort: 80
     envFrom:
-      - configMapRef: 
-        name: posix-configmap
+    - configMapRef: 
+      name: posix-configmap
           
