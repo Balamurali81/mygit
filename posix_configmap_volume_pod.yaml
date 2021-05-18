@@ -12,7 +12,7 @@ spec:
     # - configMapRef:
     #     name: ui-config
     volumeMounts:
-    - name: posix-pod-vol-mount
+    - name: config-volmumes
       mountPath: /etc/tmp
   volumes:
     - name: config-volmumes
