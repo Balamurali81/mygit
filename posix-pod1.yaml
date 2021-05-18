@@ -9,5 +9,5 @@ spec:
     ports:
       - containerPort: 8080
     envFrom:
-    - configMapRef:
-      name: ui-config
+      - configMapRef:
+        name: ui-config
