@@ -16,7 +16,7 @@ spec:
       mountPath: /etc/tmp
   volumes:
     - name: config-volmumes
-      configMapRef:
+      configMap:
         name: ui-config
   restartPolicy: OnFailure
 
