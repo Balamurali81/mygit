@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: nodejs-web-service
 spec:
+  ports:
+  - port: 3000
+    protocol: TCP
   selector:
     app: nodejs-web
   type: NodePort
-  ports:
-    - name: nodejs-port
-      port: 3000
+  

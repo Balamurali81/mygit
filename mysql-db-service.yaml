@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-db-service
+  name: database-service
 spec:
   selector:
-    app: mysql-db
+    app: database
   type: NodePort
   ports:
   - port: 3306
